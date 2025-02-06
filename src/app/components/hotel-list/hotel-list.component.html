@@ -1,0 +1,8 @@
+<input type="text" [(ngModel)]="searchQuery" placeholder="Search hotels..." />
+
+<ul>
+  <li *ngFor="let hotel of filteredHotels">
+    <img [src]="hotel.image" alt="">
+    <a [routerLink]="['/hotels', hotel.id]">{{ hotel.name }}</a> - {{ hotel.location }}
+  </li>
+</ul>
